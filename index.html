@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cổng Thông Tin Cư Dân</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:#f5f7fb;
+    color:#1f2937;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:20px;
+}
+
+/* Header */
+
+header{
+    background:white;
+    box-shadow:0 2px 10px rgba(0,0,0,.05);
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.header-inner{
+    max-width:1200px;
+    margin:auto;
+    padding:15px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:700;
+    color:#1e3a8a;
+}
+
+nav{
+    display:flex;
+    gap:25px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#374151;
+    font-weight:500;
+}
+
+nav a:hover{
+    color:#2563eb;
+}
+
+/* Hero */
+
+.hero{
+    margin-top:25px;
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:20px;
+}
+
+.hero-card{
+    background:white;
+    border-radius:16px;
+    padding:30px;
+    box-shadow:0 10px 30px rgba(0,0,0,.05);
+}
+
+.hero h1{
+    margin-bottom:12px;
+    font-size:32px;
+}
+
+.hero p{
+    color:#6b7280;
+    line-height:1.6;
+}
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+}
+
+.stat-box{
+    background:#eff6ff;
+    padding:20px;
+    border-radius:12px;
+    text-align:center;
+}
+
+.stat-box h3{
+    font-size:28px;
+    color:#1e40af;
+}
+
+.stat-box span{
+    color:#64748b;
+}
+
+/* Alert */
+
+.alert{
+    margin-top:25px;
+    background:#fef2f2;
+    border-left:5px solid #dc2626;
+    padding:18px;
+    border-radius:10px;
+}
+
+.alert strong{
+    color:#dc2626;
+}
+
+/* Search */
+
+.search-box{
+    margin-top:25px;
+    background:white;
+    padding:20px;
+    border-radius:14px;
+}
+
+.search-box input{
+    width:100%;
+    padding:14px;
+    border:1px solid #dbe2ea;
+    border-radius:10px;
+    font-size:15px;
+}
+
+/* Main */
+
+.main{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:25px;
+    margin-top:25px;
+}
+
+.section-title{
+    margin-bottom:15px;
+    font-size:22px;
+}
+
+/* News Cards */
+
+.news-list{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.news-card{
+    background:white;
+    padding:20px;
+    border-radius:14px;
+    box-shadow:0 5px 20px rgba(0,0,0,.04);
+    transition:.25s;
+}
+
+.news-card:hover{
+    transform:translateY(-3px);
+}
+
+.news-card h3{
+    margin-bottom:10px;
+}
+
+.news-meta{
+    color:#64748b;
+    font-size:14px;
+    margin-bottom:10px;
+}
+
+.tag{
+    display:inline-block;
+    background:#dbeafe;
+    color:#2563eb;
+    padding:6px 10px;
+    border-radius:30px;
+    font-size:12px;
+}
+
+/* Sidebar */
+
+.sidebar{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.widget{
+    background:white;
+    padding:20px;
+    border-radius:14px;
+}
+
+.widget h3{
+    margin-bottom:15px;
+}
+
+.doc-item{
+    display:flex;
+    justify-content:space-between;
+    padding:10px 0;
+    border-bottom:1px solid #eee;
+}
+
+.doc-item:last-child{
+    border:none;
+}
+
+.doc-item a{
+    text-decoration:none;
+    color:#2563eb;
+}
+
+.event{
+    padding:10px 0;
+    border-bottom:1px solid #eee;
+}
+
+/* Footer */
+
+footer{
+    margin-top:40px;
+    background:#111827;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+/* Mobile */
+
+@media(max-width:900px){
+
+.hero,
+.main{
+    grid-template-columns:1fr;
+}
+
+nav{
+    display:none;
+}
+
+}
+</style>
+</head>
+<body>
+
+<header>
+    <div class="header-inner">
+        <div class="logo">🏢 Green Park Residence</div>
+
+        <nav>
+            <a href="#">Trang chủ</a>
+            <a href="#">Thông báo</a>
+            <a href="#">Tài liệu</a>
+            <a href="#">Liên hệ</a>
+        </nav>
+    </div>
+</header>
+
+<div class="container">
+
+    <section class="hero">
+
+        <div class="hero-card">
+            <h1>Cổng Thông Tin Cư Dân</h1>
+
+            <p>
+                Cập nhật các thông báo mới nhất từ Ban Quản Lý,
+                tra cứu tài liệu, biểu mẫu và thông tin sinh hoạt
+                dành cho cư dân.
+            </p>
+        </div>
+
+        <div class="stats">
+
+            <div class="stat-box">
+                <h3>124</h3>
+                <span>Thông báo</span>
+            </div>
+
+            <div class="stat-box">
+                <h3>38</h3>
+                <span>Tài liệu</span>
+            </div>
+
+            <div class="stat-box">
+                <h3>512</h3>
+                <span>Cư dân</span>
+            </div>
+
+            <div class="stat-box">
+                <h3>2</h3>
+                <span>Khẩn cấp</span>
+            </div>
+
+        </div>
+
+    </section>
+
+    <div class="alert">
+        <strong>🚨 Thông báo khẩn:</strong>
+        Cắt nước toàn khu từ 22:00 đến 05:00 ngày 20/06/2026.
+    </div>
+
+    <div class="search-box">
+        <input type="text" placeholder="🔍 Tìm kiếm thông báo, tài liệu...">
+    </div>
+
+    <section class="main">
+
+        <div>
+
+            <h2 class="section-title">📢 Thông báo mới nhất</h2>
+
+            <div class="news-list">
+
+                <div class="news-card">
+                    <h3>Bảo trì thang máy Block A</h3>
+                    <div class="news-meta">
+                        12/06/2026 • Ban Quản Lý
+                    </div>
+
+                    <p>
+                        Tiến hành bảo trì định kỳ từ 08:00 đến 12:00.
+                    </p>
+
+                    <br>
+
+                    <span class="tag">Bảo trì</span>
+                </div>
+
+                <div class="news-card">
+                    <h3>Họp cư dân quý II</h3>
+
+                    <div class="news-meta">
+                        10/06/2026 • Ban Quản Trị
+                    </div>
+
+                    <p>
+                        Thông báo về cuộc họp cư dân quý II năm 2026.
+                    </p>
+
+                    <br>
+
+                    <span class="tag">Cuộc họp</span>
+                </div>
+
+                <div class="news-card">
+                    <h3>Diễn tập PCCC toàn khu</h3>
+
+                    <div class="news-meta">
+                        08/06/2026 • Ban Quản Lý
+                    </div>
+
+                    <p>
+                        Kế hoạch diễn tập và hướng dẫn cư dân tham gia.
+                    </p>
+
+                    <br>
+
+                    <span class="tag">PCCC</span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <aside class="sidebar">
+
+            <div class="widget">
+
+                <h3>📂 Tài liệu nổi bật</h3>
+
+                <div class="doc-item">
+                    <span>Nội quy cư dân</span>
+                    <a href="#">PDF</a>
+                </div>
+
+                <div class="doc-item">
+                    <span>Quy định gửi xe</span>
+                    <a href="#">PDF</a>
+                </div>
+
+                <div class="doc-item">
+                    <span>Biểu mẫu đăng ký</span>
+                    <a href="#">DOCX</a>
+                </div>
+
+            </div>
+
+            <div class="widget">
+
+                <h3>📅 Sự kiện sắp tới</h3>
+
+                <div class="event">
+                    Họp cư dân<br>
+                    <small>25/06/2026</small>
+                </div>
+
+                <div class="event">
+                    Diễn tập PCCC<br>
+                    <small>30/06/2026</small>
+                </div>
+
+            </div>
+
+        </aside>
+
+    </section>
+
+</div>
+
+<footer>
+    © 2026 Green Park Residence • Cổng Thông Tin Cư Dân
+</footer>
+
+</body>
+</html>
